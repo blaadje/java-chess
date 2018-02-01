@@ -24,3 +24,4 @@ class Plateau
         return Case[x][y];
     }
 }
+
