@@ -2,12 +2,17 @@ public class main {
 
     public static void main(String[] args)
     {
+        Plateau p = new Plateau();
 
     }
 }
 
-class Plateau
-{
+class Joueur {
+    private int pions = 8;
+    private boolean color = white;
+}
+
+class Plateau {
     public static int SIZE = 8;
 
     private Case[][] Plateau = new Case[SIZE][SIZE];
