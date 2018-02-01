@@ -6,7 +6,6 @@ public class main {
     }
 }
 
-class Case
-{
 
-}
+
+
