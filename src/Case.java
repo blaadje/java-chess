@@ -1,17 +1,26 @@
 public class Case
 {
-    private double position;
+    private double positionX;
+    private double positionY;
     private String nameOfCase;
 
-    public Case(double pos , String name)
+
+    public Case(double posX,double posY)
     {
-        this.position=pos;
-        this.nameOfCase=name;
+        this.positionX=posX;
+        this.positionY=posY;
+
+
     }
 
-    public void setPosition(double position1)
+    public void setPositionX(double positionX1)
     {
-        this.position= position1;
+        this.positionX= positionX1;
+    }
+
+    public void setPositionY(double positionY1)
+    {
+        this.positionY= positionY1;
     }
     public void setNameOfCase(String nameOfCase1)
     {
@@ -19,9 +28,13 @@ public class Case
 
     }
 
-    public  double getPosition()
+    public  double getPositionX()
     {
-        return this.position;
+        return this.positionX;
+    }
+    public  double getPositionY()
+    {
+        return this.positionY;
     }
 
     public  String getNameOfCase()
