@@ -1,3 +1,5 @@
+package pieces;
+
 public class Roi extends Piece
 {
     public Roi(String color,String name,Boolean inGame)

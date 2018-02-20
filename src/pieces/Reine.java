@@ -1,3 +1,5 @@
+package pieces;
+
 public class Reine extends Piece
 {
     public Reine(String color,String name,Boolean inGame)

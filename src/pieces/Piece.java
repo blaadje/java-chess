@@ -1,3 +1,5 @@
+package pieces;
+
 public class Piece
 {
     private String color;
