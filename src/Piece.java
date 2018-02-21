@@ -1,5 +1,3 @@
-package pieces;
-
 public class Piece
 {
     private String color;
@@ -13,9 +11,8 @@ public class Piece
         this.inGame = inGame;
     }
 
-    public boolean isValid () {
-
-    }
+    // public boolean isValid () {
+    // }
 
     public boolean isIngame () {
         return Ingame;

@@ -1,20 +1,14 @@
-import pieces.Piece;
+import Piece;
 
-public class Case
-{
-    private double positionX;
-    private double positionY;
+public class Case {
+    private int positionX;
+    private int positionY;
     private String nameOfCase;
     private Piece piece;
 
-
-    public Case(double posX, double posY , Piece piece)
-    {
-        this.positionX=posX;
-        this.positionY=posY;
-        this.piece=piece;
-
-
+    public Case(int posX, int posY) {
+        this.positionX = posX;
+        this.positionY = posY;
     }
 
     public void setPositionX(double positionX1)
@@ -32,16 +26,16 @@ public class Case
 
     }
 
-    public  double getPositionX()
+    public double getPositionX()
     {
         return this.positionX;
     }
-    public  double getPositionY()
+    public double getPositionY()
     {
         return this.positionY;
     }
 
-    public  String getNameOfCase()
+    public String getNameOfCase()
     {
         return this.nameOfCase;
     }
