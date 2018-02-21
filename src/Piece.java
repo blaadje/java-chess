@@ -6,11 +6,23 @@ public class Piece
     private String name;
     private Boolean inGame;
 
-    public Piece(String color,String name,Boolean inGame)
+    public Piece(String color, String name, Boolean inGame)
     {
-        this.color=color;
-        this.name=name;
-        this.inGame=inGame;
+        this.color = color;
+        this.name = name;
+        this.inGame = inGame;
+    }
+
+    public boolean isValid () {
+
+    }
+
+    public boolean isIngame () {
+        return Ingame;
+    }
+
+    public void setIngame (boolean inGame) {
+        this.inGame = inGame;
     }
 
     public void setColor(String color) {
