@@ -16,7 +16,7 @@ public class ChessGui extends JFrame implements MouseListener, MouseMotionListen
   public static int SIZE = 8;
 
   public ChessGui () {
-    Dimension boardSize = new Dimension(600, 600);
+    Dimension boardSize = new Dimension(300, 300);
 
     layeredPane = new JLayeredPane();
     getContentPane().add(layeredPane);
@@ -42,15 +42,76 @@ public class ChessGui extends JFrame implements MouseListener, MouseMotionListen
         square.setBackground(i % 2 == 0 ? Color.white : Color.blue);
     }
 
-    JLabel piece = new JLabel(new ImageIcon("./icones/CB.gif"));
+    JLabel piece = new JLabel(new ImageIcon("./icones/TB.gif"));
     JPanel panel = (JPanel)chessBoard.getComponent(0);
     panel.add(piece);
+    piece = new JLabel(new ImageIcon("./icones/CB.gif"));
+    panel = (JPanel) chessBoard.getComponent(1);
+    panel.add(piece);
+    piece = new JLabel(new ImageIcon("./icones/FB.gif"));
+    panel = (JPanel) chessBoard.getComponent(2);
+    panel.add(piece);
+    piece = new JLabel(new ImageIcon("./icones/RB.gif"));
+    panel = (JPanel) chessBoard.getComponent(3);
+    panel.add(piece);
+    piece = new JLabel(new ImageIcon("./icones/DB.gif"));
+    panel = (JPanel) chessBoard.getComponent(4);
+    panel.add(piece);
+    piece = new JLabel(new ImageIcon("./icones/FB.gif"));
+    panel = (JPanel) chessBoard.getComponent(5);
+    panel.add(piece);
+    piece = new JLabel(new ImageIcon("./icones/CB.gif"));
+    panel = (JPanel) chessBoard.getComponent(6);
+    panel.add(piece);
+    piece = new JLabel(new ImageIcon("./icones/TB.gif"));
+    panel = (JPanel) chessBoard.getComponent(7);
+    panel.add(piece);
+
+    for (int i = 8 ; i < 16 ; i++) {
+      piece = new JLabel(new ImageIcon("./icones/PB.gif"));
+      panel = (JPanel) chessBoard.getComponent(i);
+      panel.add(piece);
+    }
+
+    
+    panel.add(piece);
+
+    for (int i = 48; i < 56; i++) {
+      piece = new JLabel(new ImageIcon("./icones/PN.gif"));
+      panel = (JPanel) chessBoard.getComponent(i);
+      panel.add(piece);
+    }
+
+    piece = new JLabel(new ImageIcon("./icones/CN.gif"));
+    panel = (JPanel) chessBoard.getComponent(56);
+    panel.add(piece);
+    piece = new JLabel(new ImageIcon("./icones/CN.gif"));
+    panel = (JPanel) chessBoard.getComponent(57);
+    panel.add(piece);
+    piece = new JLabel(new ImageIcon("./icones/FN.gif"));
+    panel = (JPanel) chessBoard.getComponent(58);
+    panel.add(piece);
+    piece = new JLabel(new ImageIcon("./icones/RN.gif"));
+    panel = (JPanel) chessBoard.getComponent(59);
+    panel.add(piece);
+    piece = new JLabel(new ImageIcon("./icones/DN.gif"));
+    panel = (JPanel) chessBoard.getComponent(60);
+    panel.add(piece);
+    piece = new JLabel(new ImageIcon("./icones/FN.gif"));
+    panel = (JPanel) chessBoard.getComponent(61);
+    panel.add(piece);
+    piece = new JLabel(new ImageIcon("./icones/CN.gif"));
+    panel = (JPanel) chessBoard.getComponent(62);
+    panel.add(piece);
+    piece = new JLabel(new ImageIcon("./icones/TN.gif"));
+    panel = (JPanel) chessBoard.getComponent(63);
+    panel.add(piece);
+
   }
 
   public void mousePressed(MouseEvent e) {
     chessPiece = null;
     Component c = chessBoard.findComponentAt(e.getX(), e.getY());
-
     if (c instanceof JPanel)
       return;
 
@@ -61,8 +122,7 @@ public class ChessGui extends JFrame implements MouseListener, MouseMotionListen
     chessPiece.setLocation(e.getX() + xAdjustment, e.getY() + yAdjustment);
     chessPiece.setBackground(Color.blue);
     layeredPane.add(chessPiece, JLayeredPane.DRAG_LAYER);
-
-    square.setBackground(Color.red);
+  
   }
   
   public void mouseReleased(MouseEvent e) {
@@ -90,13 +150,18 @@ public class ChessGui extends JFrame implements MouseListener, MouseMotionListen
   }
 
   public void mouseMoved(MouseEvent e) {
+
+    Component c = chessBoard.findComponentAt(e.getX(), e.getY());
+    System.out.println(c);
+    // c.setBackground(Color.white);
   }
 
   public void mouseEntered(MouseEvent e) {
-
+    
   }
 
   public void mouseExited(MouseEvent e) {
-
+    Component c = chessBoard.findComponentAt(e.getX(), e.getY());
+    c.setBackground(Color.blue);
   }
 }
