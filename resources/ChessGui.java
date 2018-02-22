@@ -82,7 +82,7 @@ public class ChessGui extends JFrame implements MouseListener, MouseMotionListen
       panel.add(piece);
     }
 
-    piece = new JLabel(new ImageIcon("./icones/CN.gif"));
+    piece = new JLabel(new ImageIcon("./icones/TN.gif"));
     panel = (JPanel) chessBoard.getComponent(56);
     panel.add(piece);
     piece = new JLabel(new ImageIcon("./icones/CN.gif"));
